@@ -1,0 +1,328 @@
+
+    <section class="page-content">
+        <div class="container container-listing">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <a href="#" class="btn btn-block btn-primary d-lg-none mb-4" data-trigger="filter">Filter Options</a>
+                            <div class="filter-wrapper">
+                                <div class="filter-close"></div>
+                                <h3>Filter</h3>
+                                <p class="sub-heading">Filter by...</p>
+                                <div class="filter-group">
+                                    <button (click) = "filter_gender = !filter_gender" type="button" class="filter-group-button" data-toggle="collapse"  aria-expanded="true">Gender <span class="fas" [ngClass]="{'fa-minus': filter_gender, 'fa-plus': !filter_gender}"></span></button>
+                                    <div id="filter-gender"  class="collapse" [ngClass]="{'show': filter_gender}">
+                                        <div class="filter-group-inner">
+                                            <div class="filter-group-scrollable">
+                                                <div class="filter-checkbox">
+                                                    <input type="checkbox" id="men" name="gender" />
+                                                    <label for="men">Men's<sub>(320)</sub></label>
+                                                </div>
+                                                <div class="filter-checkbox">
+                                                    <input type="checkbox" id="uni" name="gender" />
+                                                    <label for="uni">Unisex<sub>(44)</sub></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="filter-group">
+                                    <button (click) = "filter_brands = !filter_brands" type="button" class="filter-group-button" data-toggle="collapse"  aria-expanded="true">Brand <span class="fas" [ngClass]="{'fa-minus': filter_brands, 'fa-plus': !filter_brands}"></span></button>
+                                    <div id="filter-brands" class="collapse" [ngClass]="{'show': filter_brands}">
+                                        <div class="filter-group-inner">
+                                            <div class="filter-group-scrollable">
+                                                <div class="filter-checkbox">
+                                                    <input type="checkbox" id="brand_rolex" name="brand" />
+                                                    <label for="brand_rolex">Rolex<sub>(20)</sub></label>
+                                                </div>
+                                                <div class="filter-checkbox">
+                                                    <input type="checkbox" id="brand_cartier" name="brand" />
+                                                    <label for="brand_cartier">Cartier<sub>(63)</sub></label>
+                                                </div>
+                                                <div class="filter-checkbox">
+                                                    <input type="checkbox" id="brand_chopard" name="brand" />
+                                                    <label for="brand_chopard">Chopard<sub>(24)</sub></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="filter-group">
+                                    <button (click) = "filter_size = !filter_size" type="button" class="filter-group-button" data-toggle="collapse"  aria-expanded="true">Case Size <span class="fas" [ngClass]="{'fa-minus': filter_size, 'fa-plus': !filter_size}"></span></button>
+                                    <div id="filter-case-size" class="collapse" [ngClass]="{'show': filter_size}">
+                                        <div class="filter-group-inner">
+                                            <div class="filter-group-scrollable">
+                                                <div class="filter-checkbox">
+                                                    <input type="checkbox" id="casesize_38" name="case_size" />
+                                                    <label for="casesize_38">38mm<sub>(40)</sub></label>
+                                                </div>
+                                                <div class="filter-checkbox">
+                                                    <input type="checkbox" id="casesize_42" name="case_size" />
+                                                    <label for="casesize_42">42mm<sub>(55)</sub></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="filter-group">
+                                    <button (click) = "filter_material = !filter_material" type="button" class="filter-group-button" data-toggle="collapse" aria-expanded="true">Case Material <span class="fas" [ngClass]="{'fa-minus': filter_material, 'fa-plus': !filter_material}"></span></button>
+                                    <div id="filter-case-material" class="collapse" [ngClass]="{'show': filter_material}">
+                                        <div class="filter-group-inner">
+                                            <div class="filter-group-scrollable">
+                                                <div class="filter-checkbox">
+                                                    <input type="checkbox" id="case_material_1" name="case_material" />
+                                                    <label for="case_material_1">Material 1<sub>(44)</sub></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="filter-group">
+                                    <button (click) = "filter_movement = !filter_movement" type="button" class="filter-group-button" data-toggle="collapse" aria-expanded="true">Movement <span class="fas" [ngClass]="{'fa-minus': filter_movement, 'fa-plus': !filter_movement}"></span></button>
+                                    <div id="filter-movement"  class="collapse" [ngClass]="{'show': filter_movement}">
+                                        <div class="filter-group-inner">
+                                            <div class="filter-group-scrollable">
+                                                <div class="filter-checkbox">
+                                                    <input type="checkbox" id="movement_automatic" name="movement" />
+                                                    <label for="movement_automatic">Automatic<sub>(12)</sub></label>
+                                                </div>
+                                                <div class="filter-checkbox">
+                                                    <input type="checkbox" id="movement_manual" name="movement" />
+                                                    <label for="movement_manual">Manual<sub>(54)</sub></label>
+                                                </div>
+                                                <div class="filter-checkbox">
+                                                    <input type="checkbox" id="movement_quartz" name="movement" />
+                                                    <label for="movement_quartz">Quartz<sub>(54)</sub></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="filter-group">
+                                    <button (click) = "filter_price = !filter_price" type="button" class="filter-group-button" data-toggle="collapse" aria-expanded="true">Price <span class="fas" [ngClass]="{'fa-minus': filter_price, 'fa-plus': !filter_price}"></span></button>
+                                    <div id="filter-price" class="collapse" [ngClass]="{'show': filter_price}">
+                                        <div class="filter-group-inner">
+                                            <div class="filter-group-scrollable">
+                                                <form class="form-range">
+                                                    <div><input type="text" placeholder="0" /></div>
+                                                    to
+                                                    <div><input type="text" placeholder="$9,000.00" /></div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="#" class="btn btn-block btn-primary mt-3">Apply Filters</a>
+                            </div>
+                        </div>
+                        <div class="col-lg">
+                            <h3>Browse listings</h3>
+                            <p class="sub-heading">Duis tristique imperdiet sapien, sed vestibulum turpis iaculis in.</p>
+                            <div class="listings">
+                                <div class="listings-entry">
+                                    <div class="listings-block">
+                                        <div class="listings-block-header">
+                                            <div>
+                                                by <a href="#" class="listings-block-author">Dan Masters</a>
+                                            </div>
+                                            <div>
+                                                <div class="listings-block-time-left"><span class="bh bh-time-limit-1"></span>16 days, 4 hours</div>
+                                            </div>
+                                        </div>
+                                        <a routerLink = "/listingIndividual" class="listings-block-thumb"><img src="../../assets/img/watches/Rolex-Cellini-50525-124695-1-181109-163609.jpg" /></a>
+                                        <div class="listings-block-caption">
+                                            <a routerLink = "/listingIndividual" class="name">2018 Rolex Celini</a>
+                                            <div class="spec"><span class="bh bh-compass-south-1"></span>Location: USA</div>
+                                            <div class="spec"><span class="bh bh-bandaid-1"></span>Condition: New</div>
+                                            <div class="spec"><span class="bh bh-diploma-1"></span>Certificate: Yes</div>
+                                            <div class="spec"><span class="bh bh-open-box-1"></span>Box: Yes</div>
+                                        </div>
+                                        <div class="listings-block-footer">
+                                            <div class="price">$3,240.00</div>
+                                            <a routerLink = "/listingIndividual" class="btn btn-block btn-black">View Details</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="listings-entry">
+                                    <div class="listings-block">
+                                        <div class="listings-block-header">
+                                            <div>
+                                                by <a href="#" class="listings-block-author">Dan Masters</a>
+                                            </div>
+                                            <div>
+                                                <div class="listings-block-time-left"><span class="bh bh-time-limit-1"></span>16 days, 4 hours</div>
+                                            </div>
+                                        </div>
+                                        <a routerLink = "/listingIndividual" class="listings-block-thumb"><img src="../../assets/img/watches/Breitling-SuperOceanHeritage-A17320-124456-2-181109-092129.jpg" /></a>
+                                        <div class="listings-block-caption">
+                                            <a routerLink = "/listingIndividual" class="name">2014 Breitling Superocean Heritage</a>
+                                            <div class="spec"><span class="bh bh-compass-south-1"></span>Location: USA</div>
+                                            <div class="spec"><span class="bh bh-bandaid-1"></span>Condition: New</div>
+                                            <div class="spec"><span class="bh bh-diploma-1"></span>Certificate: Yes</div>
+                                            <div class="spec"><span class="bh bh-open-box-1"></span>Box: Yes</div>
+                                        </div>
+                                        <div class="listings-block-footer">
+                                            <div class="price">$3,240.00</div>
+                                            <a routerLink = "/listingIndividual" class="btn btn-block btn-black">View Details</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="listings-entry">
+                                    <div class="listings-block">
+                                        <div class="listings-block-header">
+                                            <div>
+                                                by <a href="#" class="listings-block-author">Dan Masters</a>
+                                            </div>
+                                            <div>
+                                                <div class="listings-block-time-left"><span class="bh bh-time-limit-1"></span>16 days, 4 hours</div>
+                                            </div>
+                                        </div>
+                                        <a routerLink = "/listingIndividual" class="listings-block-thumb"><img src="../../assets/img/watches/Hublot-BigBang-301.CI.1770.RX-124153-2-181109-131755.jpg" /></a>
+                                        <div class="listings-block-caption">
+                                            <a routerLink = "/listingIndividual" class="name">2016 Hublot Big Bang</a>
+                                            <div class="spec"><span class="bh bh-compass-south-1"></span>Location: USA</div>
+                                            <div class="spec"><span class="bh bh-bandaid-1"></span>Condition: New</div>
+                                            <div class="spec"><span class="bh bh-diploma-1"></span>Certificate: Yes</div>
+                                            <div class="spec"><span class="bh bh-open-box-1"></span>Box: Yes</div>
+                                        </div>
+                                        <div class="listings-block-footer">
+                                            <div class="price">$3,240.00</div>
+                                            <a routerLink = "/listingIndividual" class="btn btn-block btn-black">View Details</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="listings-entry">
+                                    <div class="listings-block">
+                                        <div class="listings-block-header">
+                                            <div>
+                                                by <a href="#" class="listings-block-author">Dan Masters</a>
+                                            </div>
+                                            <div>
+                                                <div class="listings-block-time-left"><span class="bh bh-time-limit-1"></span>16 days, 4 hours</div>
+                                            </div>
+                                        </div>
+                                        <a routerLink = "/listingIndividual" class="listings-block-thumb"><img src="../../assets/img/watches/Rolex-Cellini-50525-124695-1-181109-163609.jpg" /></a>
+                                        <div class="listings-block-caption">
+                                            <a routerLink = "/listingIndividual" class="name">2018 Rolex Celini</a>
+                                            <div class="spec"><span class="bh bh-compass-south-1"></span>Location: USA</div>
+                                            <div class="spec"><span class="bh bh-bandaid-1"></span>Condition: New</div>
+                                            <div class="spec"><span class="bh bh-diploma-1"></span>Certificate: Yes</div>
+                                            <div class="spec"><span class="bh bh-open-box-1"></span>Box: Yes</div>
+                                        </div>
+                                        <div class="listings-block-footer">
+                                            <div class="price">$3,240.00</div>
+                                            <a routerLink = "/listingIndividual" class="btn btn-block btn-black">View Details</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="listings-entry">
+                                    <div class="listings-block">
+                                        <div class="listings-block-header">
+                                            <div>
+                                                by <a href="#" class="listings-block-author">Dan Masters</a>
+                                            </div>
+                                            <div>
+                                                <div class="listings-block-time-left"><span class="bh bh-time-limit-1"></span>16 days, 4 hours</div>
+                                            </div>
+                                        </div>
+                                        <a routerLink = "/listingIndividual" class="listings-block-thumb"><img src="../../assets/img/watches/Breitling-SuperOceanHeritage-A17320-124456-2-181109-092129.jpg" /></a>
+                                        <div class="listings-block-caption">
+                                            <a routerLink = "/listingIndividual" class="name">2014 Breitling Superocean Heritage</a>
+                                            <div class="spec"><span class="bh bh-compass-south-1"></span>Location: USA</div>
+                                            <div class="spec"><span class="bh bh-bandaid-1"></span>Condition: New</div>
+                                            <div class="spec"><span class="bh bh-diploma-1"></span>Certificate: Yes</div>
+                                            <div class="spec"><span class="bh bh-open-box-1"></span>Box: Yes</div>
+                                        </div>
+                                        <div class="listings-block-footer">
+                                            <div class="price">$3,240.00</div>
+                                            <a routerLink = "/listingIndividual" class="btn btn-block btn-black">View Details</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="listings-entry">
+                                    <div class="listings-block">
+                                        <div class="listings-block-header">
+                                            <div>
+                                                by <a href="#" class="listings-block-author">Dan Masters</a>
+                                            </div>
+                                            <div>
+                                                <div class="listings-block-time-left"><span class="bh bh-time-limit-1"></span>16 days, 4 hours</div>
+                                            </div>
+                                        </div>
+                                        <a routerLink = "/listingIndividual" class="listings-block-thumb"><img src="../../assets/img/watches/Hublot-BigBang-301.CI.1770.RX-124153-2-181109-131755.jpg" /></a>
+                                        <div class="listings-block-caption">
+                                            <a routerLink = "/listingIndividual" class="name">2016 Hublot Big Bang</a>
+                                            <div class="spec"><span class="bh bh-compass-south-1"></span>Location: USA</div>
+                                            <div class="spec"><span class="bh bh-bandaid-1"></span>Condition: New</div>
+                                            <div class="spec"><span class="bh bh-diploma-1"></span>Certificate: Yes</div>
+                                            <div class="spec"><span class="bh bh-open-box-1"></span>Box: Yes</div>
+                                        </div>
+                                        <div class="listings-block-footer">
+                                            <div class="price">$3,240.00</div>
+                                            <a routerLink = "/listingIndividual" class="btn btn-block btn-black">View Details</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr/>
+
+    <section class="page-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3>What are you looking for?</h3>
+                    <p class="sub-heading">Duis tristique imperdiet sapien, sed vestibulum turpis iaculis in.</p>
+                    <div class="watch-categories">
+                        <div class="watch-categories-entry">
+                            <a href="#" class="watch-categories-block">
+                                <div class="watch-categories-block-caption">Casual Watches</div>
+                            </a>
+                        </div>
+                        <div class="watch-categories-entry">
+                            <a href="#" class="watch-categories-block">
+                                <div class="watch-categories-block-caption">Dress Watches</div>
+                            </a>
+                        </div>
+                        <div class="watch-categories-entry">
+                            <a href="#" class="watch-categories-block">
+                                <div class="watch-categories-block-caption">Luxury Watches</div>
+                            </a>
+                        </div>
+                        <div class="watch-categories-entry">
+                            <a href="#" class="watch-categories-block">
+                                <div class="watch-categories-block-caption">Fashion Watches</div>
+                            </a>
+                        </div>
+                        <div class="watch-categories-entry">
+                            <a href="#" class="watch-categories-block">
+                                <div class="watch-categories-block-caption">Smart Watches</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="section-subscribe">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h3>Subscribe to our newsletter</h3>
+                    <p class="sub-heading">Donec et magna odio. Ut semper vel magna congue condimentum.</p>
+                    <form class="form-subscribe">
+                        <input type="email" placeholder="Enter your email address" />
+                        <button type="submit" class="btn btn-white" >Sign Up</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>

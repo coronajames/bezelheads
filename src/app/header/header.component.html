@@ -1,0 +1,43 @@
+<header>
+    <div class="navbar-band">
+            <p>Over <span>60 luxury brands</span> - <a href="listings.html">Shop Now</a></p>
+        <button type="button" class="navbar-band-close" data-dismiss="navbar-band">
+            &times;
+        </button>
+    </div>
+    <nav class="navbar navbar-expand-md">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">BezelHeads</a>
+            <div class="navbar-search">
+                <form class="form-search">
+                    <input type="text" placeholder="I'm looking for..." />
+                </form>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-toggle="navbar-menu" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="navbar-menu" id="navbar-menu">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" routerLink="/listing">Browse Listings</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">How It Works</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+                    <!--<li class="nav-item"><a class="nav-link" href="#">Register</a></li>-->
+                    <li class="nav-item dropdown">
+                        <a href="#" data-toggle="dropdown-custom" class="navbar-user-menu"><img src="http://i.pravatar.cc/60" data-bg="true" /></a>
+                        <div class="dropdown-custom">
+                            <div class="dropdown-custom-content">
+                                <a routerLink="/myListing">My Listings</a>
+                                <a routerLink="/accountSetting">Account Settings</a>
+                                <a href="#">Log Out</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a class="btn btn-outline-accent" routerLink = "addListing">+ List an Item</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>

@@ -1,0 +1,7 @@
+.fa-plus:before {
+    content: "\F067" !important;
+}
+
+.fa-minus:before {
+    content: "\F068" !important;
+}
